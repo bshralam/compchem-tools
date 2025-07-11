@@ -1,0 +1,42 @@
+========
+  SED(ENTARY)
+========
+
+# replace first n characters with space
+sed -i '3,36s/^.\{9\}//' PyNH2-an-neu.in
+
+#Replace text in a file 
+sed -i 'sed/old-text/new-text/g' filename
+
+# Delete line range from file
+sed -i '3,36d' PyNH2-an-an.in
+
+============
+   AWK(WARD)
+============
+
+# Delete every first and second line from a file
+awk 'NR % 3 == 0' logE  > tmpfile && mv tmpfile logE
+
+
+============
+   DU(H)
+============
+
+#list top 10 directories by size, sort and show in GB (not recursive) 
+du -d 1 -g . | sort -r -k1,1n
+
+
+============
+   FIND
+============
+
+#find a file in current directory recursively
+find . -name filename
+
+
+============
+   FOR
+============
+# rename files 
+for file in PyH*; do mv "$file" "PyNH2${file#PyH}"; done
