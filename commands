@@ -1,0 +1,10 @@
+1)list top 10 directories by size, sort and show in GB (not recursive) 
+du -d 1 -g . | sort -r -k1,1n
+2) Delete every first and second line from a file
+awk 'NR % 3 == 0' logE  > tmpfile && mv tmpfile logE
+3) Delete line range from file
+sed -i '3,36d' PyNH2-an-an.in
+4) rename files 
+for file in PyH*; do mv "$file" "PyNH2${file#PyH}"; done
+5) replace first n characters with space
+sed -i '3,36s/^.\{9\}//' PyNH2-an-neu.in
