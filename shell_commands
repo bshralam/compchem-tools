@@ -27,6 +27,11 @@ awk 'NR % 3 == 0' logE  > tmpfile && mv tmpfile logE
 ================
 LS(T AND FOUND)
 ================
+#Exclude filename from search
+ls -I filename 
+
+
+
 ============
    DU(H)
 ============
