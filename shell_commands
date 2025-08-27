@@ -56,3 +56,7 @@ for file in PyH*; do mv "$file" "PyNH2${file#PyH}"; done
 
 ============
 TOP(SECRET)
+===========
+VI(EWFINDER)
+#to open very large files
+vim -u NONE filename
