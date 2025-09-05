@@ -32,7 +32,8 @@ LS(T AND FOUND)
 ================
 #Exclude filename from search
 ls -I filename 
-
+#ls files and perform some script on all
+ls *.in | xargs -n1 ./script.sh
 
 
 ============
