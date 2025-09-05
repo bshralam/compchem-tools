@@ -1,4 +1,4 @@
-=====================
+====================
   SED(LY MISTAKEN)
 =====================
 
@@ -10,6 +10,9 @@ sed -i 'sed/old-text/new-text/g' filename
 
 # Delete line range from file
 sed -i '3,36d' PyNH2-an-an.in
+
+#Delete last 3 characters from each line
+sed -i 's/...$//' file.txt
 
 ============
    AWK(WARD)
