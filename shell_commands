@@ -14,6 +14,11 @@ sed -i '3,36d' PyNH2-an-an.in
 #Delete last 3 characters from each line
 sed -i 's/...$//' file.txt
 
+#Delete lines with a certain pattern 
+sed -i '/TERM_TO_DELETE/d' file.txt
+
+#Add a line after a certain line number in a file
+sed -i '5i This is the new line' file.txt ("i" before line 5, "a" after)
 ============
    AWK(WARD)
 ============
