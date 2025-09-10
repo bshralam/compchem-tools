@@ -19,6 +19,11 @@ sed -i '/TERM_TO_DELETE/d' file.txt
 
 #Add a line after a certain line number in a file
 sed -i '5i This is the new line' file.txt ("i" before line 5, "a" after)
+
+#Use asterisk as wildcard in sed 
+sed -i 's/65-.*\.xyz/file.xyz/g' *.in
+
+
 ============
    AWK(WARD)
 ============
