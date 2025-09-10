@@ -12,7 +12,7 @@ sed -i 'sed/old-text/new-text/g' filename
 sed -i '3,36d' PyNH2-an-an.in
 
 #Delete last 3 characters from each line
-sed -i 's/...$//' file.txt
+sed -i 's/...$//' files.txt
 
 #Delete lines with a certain pattern 
 sed -i '/TERM_TO_DELETE/d' file.txt
@@ -23,7 +23,8 @@ sed -i '5i This is the new line' file.txt ("i" before line 5, "a" after)
 #Use asterisk as wildcard in sed 
 sed -i 's/65-.*\.xyz/file.xyz/g' *.in
 
-
+#delete last 2 lines
+sed -i -e :a -e '$d;N;2,2ba' -e 'P;D' *.in
 ============
    AWK(WARD)
 ============
@@ -74,3 +75,10 @@ TOP(SECRET)
 VI(EWFINDER)
 #to open very large files
 vim -u NONE filename
+
+
+============
+WC(UP2025)
+===========
+#count lines in each file
+wc -l *.xyz
