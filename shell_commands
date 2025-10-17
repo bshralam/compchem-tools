@@ -52,7 +52,7 @@ ls *.in | xargs -n1 ./script.sh
 ============
 
 #list top 10 directories by size, sort and show in GB (not recursive) 
-du -d 1 -g . | sort -r -k1,1n
+du -d 1 -B G . | sort -r -k1,1n
 
 
 =======================
