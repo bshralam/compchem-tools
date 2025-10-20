@@ -45,6 +45,8 @@ LS(T AND FOUND)
 ls -I filename 
 #ls files and perform some script on all
 ls *.in | xargs -n1 ./script.sh
+#exclude specific files of certain extension
+ls --ignore="slurm*" | grep '\.out$'
 
 
 ============
